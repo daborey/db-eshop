@@ -1,13 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello</h1>
-    <p>How are you? I am fine.</p>
-</body>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>products</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .product {
+      text-align: center;
+    }
+
+    .product img {
+      width: 90vw;   /* default: phone → 1 per row */
+      height: 90vw;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .product h2 {
+      margin: 8px 0 4px;
+    }
+
+    .product p {
+      margin: 0;
+    }
+
+    /* tablet (≥ 600px) → 2 per row */
+    @media (min-width: 600px) {
+      .product img {
+        width: 45vw;
+        height: 45vw;
+      }
+    }
+
+    /* desktop (≥ 992px) → 3 per row */
+    @media (min-width: 992px) {
+      .product img {
+        width: 30vw;
+        height: 30vw;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>products</h1>
+
+  <div class="gallery">
+    <div class="product">
+      <img src="images/cable.jpg" alt="cable">
+      <h2>cable</h2>
+      <p>price: $13</p>
+    </div>
+
+    <div class="product">
+      <img src="images/cable.jpg" alt="cable">
+      <h2>cable</h2>
+      <p>price: $13</p>
+    </div>
+
+    <div class="product">
+      <img src="images/cable.jpg" alt="cable">
+      <h2>cable</h2>
+      <p>price: $13</p>
+    </div>
+    <!-- repeat -->
+  </div>
+</body>
 </html>
